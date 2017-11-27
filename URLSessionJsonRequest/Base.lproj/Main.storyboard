@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WbQ-gb-EZY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--json-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="URLSessionJsonRequest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="2qT-g0-GaA">
+                                <rect key="frame" x="167" y="278" width="40" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0H-3G-Cv6">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
+                                        <state key="normal" title="GET"/>
+                                        <connections>
+                                            <action selector="onGetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zo3-Cm-Kmi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-0d-WmY">
+                                        <rect key="frame" x="0.0" y="80" width="40" height="30"/>
+                                        <state key="normal" title="POST"/>
+                                        <connections>
+                                            <action selector="onPostTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mjs-p5-ypY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2qT-g0-GaA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1f1-Ly-4Je"/>
+                            <constraint firstItem="2qT-g0-GaA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ezl-c6-YCk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="json" id="TPK-dA-4a3">
+                        <barButtonItem key="rightBarButtonItem" title="next" id="89a-UC-4LJ">
+                            <connections>
+                                <segue destination="vcw-Yj-AmK" kind="show" id="L18-0M-FCx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="203"/>
+        </scene>
+        <!--multipart-->
+        <scene sceneID="1Nd-E3-3ae">
+            <objects>
+                <viewController id="vcw-Yj-AmK" customClass="MultipartController" customModule="URLSessionJsonRequest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Fm-W4-8VS"/>
+                        <viewControllerLayoutGuide type="bottom" id="UfA-1m-asv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TQf-Vw-eNT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="N46-QA-381">
+                                <rect key="frame" x="167" y="278" width="40" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSj-D7-OfW">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
+                                        <state key="normal" title="GET"/>
+                                        <connections>
+                                            <action selector="getRequest:" destination="vcw-Yj-AmK" eventType="touchUpInside" id="KO5-23-W4G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yM-LC-fHM">
+                                        <rect key="frame" x="0.0" y="80" width="40" height="30"/>
+                                        <state key="normal" title="POST"/>
+                                        <connections>
+                                            <action selector="postRequest:" destination="vcw-Yj-AmK" eventType="touchUpInside" id="A9d-em-mOi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N46-QA-381" firstAttribute="centerX" secondItem="TQf-Vw-eNT" secondAttribute="centerX" id="ShX-Ag-WU5"/>
+                            <constraint firstItem="N46-QA-381" firstAttribute="centerY" secondItem="TQf-Vw-eNT" secondAttribute="centerY" id="b3N-Qd-NOx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="multipart" id="KWq-MT-fV6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0z-Fm-COX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="203"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zbl-zf-diu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WbQ-gb-EZY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LXf-dI-aAC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xid-NY-r3d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WbJ-Zb-2oL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448.80000000000001" y="-560.86956521739137"/>
+        </scene>
+    </scenes>
+</document>
